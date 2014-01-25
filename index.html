@@ -1,0 +1,59 @@
+<html> 
+	<head> 
+		<title>PaintCollar - Coming Soon...</title> 
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<script id="shader-fs" type="x-shader/x-fragment">
+				#ifdef GL_ES
+				  precision highp float;
+				  #endif
+				  
+				 uniform vec4 color;
+				 
+    		void main(void) {
+    		 gl_FragColor = color;
+    		}
+		</script>
+		
+		<script id="shader-vs" type="x-shader/x-vertex">
+  			attribute vec3 vertexPosition;
+
+			uniform mat4 modelViewMatrix;
+			uniform mat4 perspectiveMatrix;
+
+ 			void main(void) {
+				gl_Position = perspectiveMatrix * modelViewMatrix * vec4(vertexPosition, 1.0);
+			}	
+		</script>
+		
+	<link type="text/css" rel="stylesheet" href="particles.css"/>
+    </head>
+	<body>
+		<canvas id="webGLCanvas"></canvas>
+	<div id="content">
+
+	<div class="logo_box"><iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Ftheoldmonks&amp;width&amp;height=258&amp;colorscheme=dark&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=469153933100777" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:258px;" allowTransparency="true"></iframe></div>          
+	<div class="main_box">
+		<h2>PaintCollar website is coming soon.<br/><span>In the mean time connect with us with the information below</span></h2>
+		
+		<ul class="info">
+			<li>
+				<h3>P</h3>
+				<p>+91-9619-491715<br/>+91-9619-573253</p>
+			</li>
+			<li>
+				<h3>A</h3>
+                <p>Samta Nagar, Thane West <br/> Mumbai, Maharashtra<br/>India</p>
+			</li>
+			<li>
+				<h3>S</h3>
+				<p class="social">
+					<a href="https://twitter.com/PaintCollar" class="tw"></a>
+					<a href="http://www.facebook.com/theoldmonks" class="fb"></a>				
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html> 
