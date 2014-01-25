@@ -40,7 +40,15 @@
 	onResize();
 
 	// start animation
-	animate();
+    if(gl) {
+	  animate();
+      onMouseDown({
+          pageX:window.innerWidth/2,
+          pageY: window.innerHeight/2,
+          preventDefault: function(){}
+        });
+    }
+
 
 	function onResize(e) {
 		cw = window.innerWidth; 
@@ -232,7 +240,6 @@
 		//    if it's not available exit
 		if(!gl)
 		{
-			alert("There's no WebGL context available.");
 			return;
 		}
 		//    Set the viewport to the canvas width and height
