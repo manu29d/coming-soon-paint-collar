@@ -47,10 +47,9 @@ div#content {
 
 .logo_box{
 width: 349px;
-float: left;
-border-right: 1px solid #303030;
 height: 280px;
 position: relative;
+margin: 0 auto;
 }
 h1{
 padding: 12px 70px 12px 20px;
